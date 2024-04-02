@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.houseController">
+   <children>
+      <Text fx:id="errorText" layoutX="82.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="Gotham-Bold" size="18.0" />
+         </font></Text>
+      <Rectangle fill="#2e8dddd9" height="600.0" layoutX="370.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="530.0" />
+      <ChoiceBox fx:id="houseChoice" layoutX="82.0" layoutY="100.0" prefHeight="37.0" prefWidth="252.0" />
+      <ListView fx:id="listView" layoutX="487.0" layoutY="100.0" prefHeight="400.0" prefWidth="300.0" />
+      <TextField fx:id="searchField" layoutX="82.0" layoutY="169.0" prefHeight="37.0" prefWidth="252.0" />
+      <Button layoutX="82.0" layoutY="225.0" mnemonicParsing="false" onAction="#searchPressed" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: #2e8ddd; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: white;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="Gotham-Book" size="18.0" />
+         </font></Button>
+      <Button fx:id="backMainMenu" layoutX="82.0" layoutY="341.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: #2e8ddd; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: white;" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="Gotham-Book" size="18.0" />
+         </font>
+      </Button>
+      <Rectangle arcWidth="5.0" fill="#37165c" height="28.0" stroke="BLACK" strokeType="INSIDE" width="874.0" />
+      <Rectangle arcWidth="5.0" fill="#37165c" height="574.0" layoutX="873.0" stroke="BLACK" strokeType="INSIDE" width="27.0" />
+      <Rectangle arcWidth="5.0" fill="#37165c" height="547.0" layoutY="27.0" stroke="BLACK" strokeType="INSIDE" width="27.0" />
+      <Rectangle arcWidth="5.0" fill="#37165c" height="28.0" layoutY="573.0" stroke="BLACK" strokeType="INSIDE" width="900.0" />
+      <Rectangle arcWidth="5.0" fill="#37165c" height="26.0" layoutX="1.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="25.0" />
+      <Rectangle arcWidth="5.0" fill="#37165c" height="26.0" layoutX="1.0" layoutY="563.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="25.0" />
+      <Rectangle arcWidth="5.0" fill="#37165c" height="26.0" layoutX="874.0" layoutY="559.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="25.0" />
+      <Rectangle arcWidth="5.0" fill="#37165c" height="26.0" layoutX="872.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="25.0" />
+   </children>
+</Pane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.finalController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37165cda" height="600.0" stroke="#37165c" strokeType="INSIDE" strokeWidth="0.0" width="900.0" />
+      <Label alignment="CENTER" layoutY="143.0" prefHeight="92.0" prefWidth="900.0" text="What would you like to do next?" textFill="WHITE">
+         <font>
+            <Font name="Gotham-MediumItalic" size="28.0" />
+         </font></Label>
+      <Label fx:id="addAgain" alignment="CENTER" layoutX="264.0" layoutY="267.0" onMouseClicked="#addagainPressed" onMouseEntered="#againHovered" onMouseExited="#exitHover" prefHeight="46.0" prefWidth="370.0" style="-fx-background-color: #2e8ddd; -fx-background-radius: 10; -fx-border-color: white; -fx-border-radius: 10;" text="Add Another User" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="backMainMenu" alignment="CENTER" layoutX="262.0" layoutY="347.0" onMouseClicked="#backPressed" onMouseEntered="#backHovered" onMouseExited="#exitHover" prefHeight="46.0" prefWidth="370.0" style="-fx-background-color: #2e8ddd; -fx-background-radius: 10; -fx-border-color: white; -fx-border-radius: 10;" text="Go Back to Main Menu" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="160.0" fitWidth="210.0" layoutX="349.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@prolts.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="299.0" layoutY="530.0" text="Status Update: Person Has Been Added" textFill="WHITE">
+         <font>
+            <Font name="Gotham-Book" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

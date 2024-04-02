@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.listController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="MEDIUMPURPLE" height="602.0" layoutX="-123.0" layoutY="-1.0" stroke="MEDIUMPURPLE" strokeType="INSIDE" width="1026.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="MEDIUMPURPLE" height="99.0" layoutX="30.0" layoutY="22.0" stroke="MEDIUMPURPLE" strokeType="INSIDE" strokeWidth="5.0" width="281.0" />
+      <Text fill="WHITE" layoutX="30.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List of People:" wrappingWidth="281.0">
+         <font>
+            <Font name="Cambria" size="21.0" />
+         </font></Text>
+      <Rectangle arcHeight="200.0" arcWidth="100.0" fill="WHITE" height="99.0" layoutX="401.0" layoutY="22.0" stroke="WHITE" strokeType="INSIDE" width="446.0" />
+      <Rectangle arcHeight="150.0" arcWidth="50.0" fill="MEDIUMPURPLE" height="66.0" layoutX="420.0" layoutY="39.0" stroke="MEDIUMPURPLE" strokeType="INSIDE" width="407.0" />
+      <Text fill="WHITE" layoutX="431.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COVID-19 Safety Form" wrappingWidth="393.79998779296875">
+         <font>
+            <Font name="Cambria" size="40.0" />
+         </font></Text>
+      <ImageView fx:id="backMainMenu" fitHeight="51.0" fitWidth="38.0" layoutX="821.0" layoutY="533.0" onMouseClicked="#backPressed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@unnamed.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="352.0" layoutX="372.0" layoutY="137.0" stroke="WHITE" strokeType="INSIDE" width="504.0" />
+      <ScrollPane layoutX="387.0" layoutY="150.0" prefHeight="328.0" prefWidth="475.0">
+         <content>
+          <AnchorPane fx:id="anchorPane" minHeight="0.0" minWidth="0.0" prefHeight="608.0" prefWidth="368.0" visible="false">
+               <children>
+                  <Text layoutX="14.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For the past three days, have you experienced any of the COVID-19 symptoms?" />
+                  <RadioButton fx:id="yes1" layoutX="97.0" layoutY="198.0" mnemonicParsing="false" text="Yes" />
+                  <RadioButton fx:id="no1" layoutX="267.0" layoutY="198.0" mnemonicParsing="false" text="No" />
+                  <Text layoutX="14.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Have you travelled out of the country in the last two months?" wrappingWidth="330.1922607421875" />
+                  <RadioButton fx:id="yes2" layoutX="97.0" layoutY="287.0" mnemonicParsing="false" text="Yes" />
+                  <RadioButton fx:id="no2" layoutX="267.0" layoutY="287.0" mnemonicParsing="false" text="No" />
+                  <Text layoutX="14.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Have you been in contact with anyone with COVID-19 symptoms?" wrappingWidth="367.9999999999999" />
+                  <RadioButton fx:id="yes3" layoutX="97.0" layoutY="385.0" mnemonicParsing="false" text="Yes" />
+                  <RadioButton fx:id="no3" layoutX="267.0" layoutY="385.0" mnemonicParsing="false" text="No" />
+                  <Text layoutX="14.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Is your temperature below 37.8°?" wrappingWidth="367.9999999999999" />
+                  <RadioButton fx:id="yes4" layoutX="97.0" layoutY="457.0" mnemonicParsing="false" text="Yes" />
+                  <RadioButton fx:id="no4" layoutX="267.0" layoutY="457.0" mnemonicParsing="false" text="No" />
+                  <TextArea fx:id="informationArea" prefHeight="145.0" prefWidth="466.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <ImageView fx:id="deleteButton" fitHeight="66.0" fitWidth="94.0" layoutX="591.0" layoutY="500.0" onMouseClicked="#deletePressed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@deleteSign.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="425.0" layoutX="30.0" layoutY="76.0" stroke="WHITE" strokeType="INSIDE" width="316.0" />
+      <ListView fx:id="listView" fixedCellSize="100.0" layoutX="48.0" layoutY="92.0" onMouseClicked="#setInformation" prefHeight="394.0" prefWidth="281.0" style="-fx-selection-bar: DARKMAGENTA;" />
+      <Rectangle fx:id="alphabeticalSort" arcHeight="5.0" arcWidth="5.0" fill="PLUM" height="31.0" layoutX="30.0" layoutY="517.0" onMouseClicked="#alphabeticalSort" onMouseEntered="#alphabeticalHovered" onMouseExited="#exitHovered" stroke="WHITE" strokeType="INSIDE" width="136.0" />
+      <Rectangle fx:id="entryButton" arcHeight="5.0" arcWidth="5.0" fill="PLUM" height="31.0" layoutX="216.0" layoutY="517.0" onMouseClicked="#fillList" onMouseEntered="#entryHovered" onMouseExited="#exitHovered" stroke="WHITE" strokeType="INSIDE" width="130.0" />
+      <Text fill="WHITE" layoutX="41.0" layoutY="537.0" onMouseClicked="#alphabeticalSort" onMouseEntered="#alphabeticalHovered" onMouseExited="#exitHovered" strokeType="OUTSIDE" strokeWidth="0.0" text="Sort Alphabetically">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="241.0" layoutY="536.0" onMouseClicked="#fillList" onMouseEntered="#entryHovered" onMouseExited="#exitHovered" strokeType="OUTSIDE" strokeWidth="0.0" text="Sort by Entry">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

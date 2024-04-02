@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.listController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="602.0" layoutX="-3.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="347.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#35a9df" height="602.0" layoutX="343.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="560.0" />
+      <ListView fx:id="listView" fixedCellSize="100.0" layoutX="23.0" layoutY="141.0" onMouseClicked="#setInformation" prefHeight="394.0" prefWidth="281.0" style="-fx-selection-bar: DARKMAGENTA;" />
+      <Text layoutX="23.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List of People:" />
+      <Button layoutX="23.0" layoutY="66.0" mnemonicParsing="false" onAction="#alphabeticalSort" prefHeight="25.0" prefWidth="125.0" text="Sort Alphabetical" />
+      <Button layoutX="182.0" layoutY="109.0" mnemonicParsing="false" text="Search" />
+      <TextField layoutX="26.0" layoutY="109.0" prefHeight="25.0" prefWidth="156.0" />
+      <Text fill="WHITE" layoutX="400.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Information" wrappingWidth="125.00000000000006">
+         <font>
+            <Font size="20.0" />
+         </font></Text>
+      <Button fx:id="deleteButton" layoutX="648.0" layoutY="523.0" mnemonicParsing="false" onAction="#deletePressed" text="DELETE" />
+      <Button layoutX="166.0" layoutY="66.0" mnemonicParsing="false" onAction="#fillList" text="Sort by Entry" />
+      <ImageView fx:id="backMainMenu" fitHeight="51.0" fitWidth="38.0" layoutX="821.0" layoutY="533.0" onMouseClicked="#backPressed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@unnamed.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="386.0" layoutY="150.0" prefHeight="327.0" prefWidth="475.0">
+         <content>
+          <AnchorPane fx:id="anchorPane" minHeight="0.0" minWidth="0.0" prefHeight="608.0" prefWidth="368.0" visible="false">
+               <children>
+                  <Text layoutX="14.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For the past three days, have you experienced any of the COVID-19 symptoms?" />
+                  <RadioButton fx:id="yes1" layoutX="97.0" layoutY="198.0" mnemonicParsing="false" text="Yes" />
+                  <RadioButton fx:id="no1" layoutX="267.0" layoutY="198.0" mnemonicParsing="false" text="No" />
+                  <Text layoutX="14.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Have you travelled out of the country in the last two months?" wrappingWidth="330.1922607421875" />
+                  <RadioButton fx:id="yes2" layoutX="97.0" layoutY="287.0" mnemonicParsing="false" text="Yes" />
+                  <RadioButton fx:id="no2" layoutX="267.0" layoutY="287.0" mnemonicParsing="false" text="No" />
+                  <Text layoutX="14.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Have you been in contact with anyone with COVID-19 symptoms?" wrappingWidth="367.9999999999999" />
+                  <RadioButton fx:id="yes3" layoutX="97.0" layoutY="385.0" mnemonicParsing="false" text="Yes" />
+                  <RadioButton fx:id="no3" layoutX="267.0" layoutY="385.0" mnemonicParsing="false" text="No" />
+                  <Text layoutX="14.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Is your temperature below 37.8°?" wrappingWidth="367.9999999999999" />
+                  <RadioButton fx:id="yes4" layoutX="97.0" layoutY="457.0" mnemonicParsing="false" text="Yes" />
+                  <RadioButton fx:id="no4" layoutX="267.0" layoutY="457.0" mnemonicParsing="false" text="No" />
+                  <TextArea fx:id="informationArea" prefHeight="145.0" prefWidth="466.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>

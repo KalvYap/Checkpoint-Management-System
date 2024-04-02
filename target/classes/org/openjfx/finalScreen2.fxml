@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.finalController">
+   <children>
+      <Rectangle fx:id="addAgain" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="149.0" layoutX="108.0" layoutY="94.0" onMouseClicked="#addagainPressed" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <Rectangle fx:id="backMainMenu" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="149.0" layoutX="331.0" layoutY="94.0" onMouseClicked="#backPressed" stroke="BLACK" strokeType="INSIDE" width="140.0" />
+      <Text layoutX="40.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(add another user button)" />
+      <Text layoutX="321.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(backtomainmenu)" />
+      <Text layoutX="211.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PERSON HAS BEEN ADDED" />
+   </children>
+</Pane>

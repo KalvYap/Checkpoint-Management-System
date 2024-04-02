@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.aboutController">
+   <children>
+      <ImageView fitHeight="710.0" fitWidth="985.0" layoutX="-50.0" layoutY="-85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@purple2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="raf" fitHeight="211.0" fitWidth="156.0" layoutX="356.0" layoutY="35.0" onMouseEntered="#rafHovered" onMouseExited="#exitHovered" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@minatoedited.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kalvin" fitHeight="222.0" fitWidth="192.0" layoutX="135.0" layoutY="35.0" onMouseEntered="#kalvinHovered" onMouseExited="#exitHovered" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@luffyedited.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="daine" fitHeight="211.0" fitWidth="157.0" layoutX="572.0" layoutY="26.0" onMouseEntered="#daineHovered" onMouseExited="#exitHovered" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@hisokaedited.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="exitButton" fitHeight="100.0" fitWidth="45.0" layoutX="14.0" layoutY="523.0" onMouseClicked="#exitPressed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@exiticon.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="paneStart1" layoutX="139.0" layoutY="495.0" prefHeight="370.0" prefWidth="354.0" style="-fx-background-color: INDIGO;" />
+      <Pane fx:id="paneFinal" layoutX="283.0" layoutY="300.0" prefHeight="390.0" prefWidth="354.0" style="-fx-background-color: INDIGO;" visible="false">
+         <children>
+            <TextArea fx:id="textArea" layoutX="14.0" layoutY="34.0" prefHeight="362.0" prefWidth="327.0" style="-fx-font-alignment: center;" />
+            <Text fx:id="nameText" fill="WHITE" layoutX="135.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="paneStart2" layoutX="316.0" layoutY="495.0" prefHeight="370.0" prefWidth="354.0" style="-fx-background-color: DARKMAGENTA;" />
+      <Pane fx:id="paneStart3" layoutX="478.0" layoutY="495.0" prefHeight="370.0" prefWidth="354.0" style="-fx-background-color: MEDIUMORCHID;" />
+   </children>
+</Pane>
